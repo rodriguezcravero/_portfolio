@@ -28,76 +28,98 @@ setInterval(() => {
   setTimeout(() => (puntosSuspensivos2.innerHTML = "..."), 2000);
 }, 4000);
 
-setTimeout(() => (textoBio1.innerHTML = "E"), 100);
-setTimeout(() => (textoBio1.innerHTML = "Es"), 200);
-setTimeout(() => (textoBio1.innerHTML = "Est"), 300);
-setTimeout(() => (textoBio1.innerHTML = "Estu"), 400);
-setTimeout(() => (textoBio1.innerHTML = "Estud"), 500);
-setTimeout(() => (textoBio1.innerHTML = "Estudi"), 600);
-setTimeout(() => (textoBio1.innerHTML = "Estudia"), 700);
-setTimeout(() => (textoBio1.innerHTML = "Estudian"), 800);
-setTimeout(() => (textoBio1.innerHTML = "Estudiant"), 900);
-setTimeout(() => (textoBio1.innerHTML = "Estudiante"), 1000);
-setTimeout(() => (textoBio1.innerHTML = "Estudiante d"), 1100);
-setTimeout(() => (textoBio1.innerHTML = "Estudiante de "), 1200);
-setTimeout(() => (textoBio1.innerHTML = "Estudiante de I"), 1300);
-setTimeout(() => (textoBio1.innerHTML = "Estudiante de In"), 1400);
-setTimeout(() => (textoBio1.innerHTML = "Estudiante de Inf"), 1500);
-setTimeout(() => (textoBio1.innerHTML = "Estudiante de Info"), 1600);
-setTimeout(() => (textoBio1.innerHTML = "Estudiante de Infor"), 1700);
-setTimeout(() => (textoBio1.innerHTML = "Estudiante de Inform"), 1800);
-setTimeout(() => (textoBio1.innerHTML = "Estudiante de Informa"), 1900);
-setTimeout(() => (textoBio1.innerHTML = "Estudiante de Inform"), 2000);
-setTimeout(() => (textoBio1.innerHTML = "Estudiante de Informá"), 2100);
-setTimeout(() => (textoBio1.innerHTML = "Estudiante de Informát"), 2200);
-setTimeout(() => (textoBio1.innerHTML = "Estudiante de Informáti"), 2300);
-setTimeout(() => (textoBio1.innerHTML = "Estudiante de Informátic"), 2400);
-setTimeout(() => (textoBio1.innerHTML = "Estudiante de Informática"), 2500);
+let bio1 = "Estudiante de informática";
+let bio2 = "UNLP - 2º año";
+let bio3 = "Experiencia: experto";
+let junior = "junior.....";
+let trainee = "traineè";
+let num = 0;
+let str1 = "";
 
-setTimeout(() => (textoBio2.innerHTML = "UNLP - 2º año"), 2800);
+let boo1 = true,
+  boo2 = false,
+  boo3 = false,
+  boo4 = false,
+  boo5 = false,
+  boo6 = false,
+  boo7 = false,
+  booAux = false;
 
-setTimeout(() => (textoBio3.innerHTML = "E"), 3000);
-setTimeout(() => (textoBio3.innerHTML = "Ex"), 3100);
-setTimeout(() => (textoBio3.innerHTML = "Exp"), 3200);
-setTimeout(() => (textoBio3.innerHTML = "Expe"), 3300);
-setTimeout(() => (textoBio3.innerHTML = "Exper"), 3400);
-setTimeout(() => (textoBio3.innerHTML = "Experi"), 3500);
-setTimeout(() => (textoBio3.innerHTML = "Experie"), 3600);
-setTimeout(() => (textoBio3.innerHTML = "Experien"), 3700);
-setTimeout(() => (textoBio3.innerHTML = "Experienc"), 3800);
-setTimeout(() => (textoBio3.innerHTML = "Experienci"), 3900);
-setTimeout(() => (textoBio3.innerHTML = "Experiencia"), 4000);
-setTimeout(() => (textoBio3.innerHTML = "Experiencia: "), 4100);
-setTimeout(() => (textoBio3.innerHTML = "Experiencia: e"), 4200);
-setTimeout(() => (textoBio3.innerHTML = "Experiencia: ex"), 4300);
-setTimeout(() => (textoBio3.innerHTML = "Experiencia: exp"), 4400);
-setTimeout(() => (textoBio3.innerHTML = "Experiencia: expe"), 4500);
-setTimeout(() => (textoBio3.innerHTML = "Experiencia: exper"), 4600);
-setTimeout(() => (textoBio3.innerHTML = "Experiencia: expert"), 4700);
-setTimeout(() => (textoBio3.innerHTML = "Experiencia: experto"), 4800);
-setTimeout(() => (textoBio3.innerHTML = "Experiencia: expert"), 5300);
-setTimeout(() => (textoBio3.innerHTML = "Experiencia: exper"), 5400);
-setTimeout(() => (textoBio3.innerHTML = "Experiencia: expe"), 5500);
-setTimeout(() => (textoBio3.innerHTML = "Experiencia: exp"), 5600);
-setTimeout(() => (textoBio3.innerHTML = "Experiencia: ex"), 5700);
-setTimeout(() => (textoBio3.innerHTML = "Experiencia: "), 5800);
-setTimeout(() => (textoBio3.innerHTML = "Experiencia: j"), 5900);
-setTimeout(() => (textoBio3.innerHTML = "Experiencia: ju"), 6000);
-setTimeout(() => (textoBio3.innerHTML = "Experiencia: jun"), 6100);
-setTimeout(() => (textoBio3.innerHTML = "Experiencia: juni"), 6200);
-setTimeout(() => (textoBio3.innerHTML = "Experiencia: junio"), 6300);
-setTimeout(() => (textoBio3.innerHTML = "Experiencia: junior"), 6400);
-setTimeout(() => (textoBio3.innerHTML = "Experiencia: junio"), 6800);
-setTimeout(() => (textoBio3.innerHTML = "Experiencia: jun"), 6900);
-setTimeout(() => (textoBio3.innerHTML = "Experiencia: ju"), 7000);
-setTimeout(() => (textoBio3.innerHTML = "Experiencia: j"), 7100);
-setTimeout(() => (textoBio3.innerHTML = "Experiencia: "), 7200);
-setTimeout(() => (textoBio3.innerHTML = "Experiencia: t"), 7300);
-setTimeout(() => (textoBio3.innerHTML = "Experiencia: tr"), 7400);
-setTimeout(() => (textoBio3.innerHTML = "Experiencia: tra"), 7500);
-setTimeout(() => (textoBio3.innerHTML = "Experiencia: trai"), 7600);
-setTimeout(() => (textoBio3.innerHTML = "Experiencia: train"), 7700);
-setTimeout(() => (textoBio3.innerHTML = "Experiencia: traine"), 7800);
-setTimeout(() => (textoBio3.innerHTML = "Experiencia: trainee"), 7900);
-setTimeout(() => (textoBio3.innerHTML = "Experiencia: traineè"), 8200);
-setTimeout(() => (textoBio3.innerHTML = "Experiencia: traineé"), 8300);
+let intervalo = setInterval(() => {
+  if (boo1) {
+    if (num < bio1.length) {
+      str1 += bio1[num++];
+      textoBio1.innerHTML = str1;
+    } else {
+      boo1 = false;
+      boo2 = true;
+      num = 0;
+      str1 = "";
+    }
+  }
+  if (boo2) {
+    if (num < bio2.length) {
+      str1 += bio2[num++];
+      textoBio2.innerHTML = str1;
+    } else {
+      boo2 = false;
+      boo3 = true;
+      num = 0;
+      str1 = "";
+    }
+  }
+  if (boo3) {
+    if (num < bio3.length) {
+      str1 += bio3[num++];
+      textoBio3.innerHTML = str1;
+    } else {
+      boo3 = false;
+      boo4 = true;
+      num = 0;
+    }
+  }
+  if (boo4) {
+    if (num < 7) {
+      str1 = str1.substring(0, str1.length - 1);
+      num++;
+      textoBio3.innerHTML = str1;
+    } else {
+      boo4 = false;
+      boo5 = true;
+      num = 0;
+    }
+  }
+  if (boo5) {
+    if (num < junior.length) {
+      str1 += junior[num++];
+      textoBio3.innerHTML = str1;
+    } else {
+      boo5 = false;
+      boo6 = true;
+      num = 0;
+    }
+  }
+  if (boo6) {
+    if (num < junior.length) {
+      str1 = str1.substring(0, str1.length - 1);
+      num++;
+      textoBio3.innerHTML = str1;
+    } else {
+      boo6 = false;
+      boo7 = true;
+      num = 0;
+    }
+  }
+  if (boo7) {
+    if (num < trainee.length) {
+      str1 += trainee[num++];
+      textoBio3.innerHTML = str1;
+    } else {
+      booAux = true;
+    }
+  }
+  if (booAux) {
+    textoBio3.innerHTML = "Experiencia: traineé";
+    clearInterval(intervalo);
+  }
+}, 100);
